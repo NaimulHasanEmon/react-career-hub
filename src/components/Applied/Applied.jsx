@@ -31,7 +31,7 @@ const Applied = () => {
             setDisplayJobs(onlineJobs)
         }
         else if (filter === 'fullTime') {
-            const fullTimeJobs = appliedJobs.filter(jobs => jobs.remote_or_onsite === 'Full Time') 
+            const fullTimeJobs = appliedJobs.filter(jobs => jobs.job_type === 'Full Time') 
             setDisplayJobs(fullTimeJobs)
         }
     }
@@ -48,8 +48,8 @@ const Applied = () => {
                         <option disabled hidden selected>Filter By</option>
                         <option value="all">All</option>
                         <option value="remote">Remote</option>
-                        <option value="fullTime">Full Time</option>
                         <option value="onsite">Onsite</option>
+                        <option value="fullTime">Full Time</option>
                     </select>
                 </div>
                 <div className="flex flex-col gap-3 mb-10">

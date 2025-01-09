@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import JobCard from "../JobCard/JobCard";
-import { NavLink } from "react-router-dom";
 
 const FeaturedJobs = () => {
-
     const[jobs, setJobs] = useState([])
+    // Though this is not the most efficient way
+    const[dataLength, setDataLength] = useState(4)
 
     useEffect(() => {
         fetch('jobs.json')
@@ -21,7 +21,7 @@ const FeaturedJobs = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                     {
-                        jobs.map(job =>
+                        jobs.slice(0, dataLength).map(job =>
                             <JobCard
                                 key={job.id}
                                 job={job}
@@ -29,10 +29,10 @@ const FeaturedJobs = () => {
                         )
                     }
                 </div>
-                <div className="flex justify-center my-10">
-                    <NavLink to=''>
-                        <button className="btn bg-gradient-to-r from-indigo-400  to-indigo-500 text-white text-lg">See All</button>
-                    </NavLink>
+                <div className={`flex justify-center my-10 ${dataLength === jobs.length && 'hidden'}`}>
+                    <button
+                        onClick={() => setDataLength(jobs.length)}
+                        className="btn bg-gradient-to-r from-indigo-400  to-indigo-500 text-white text-lg">See All</button>
                 </div>
             </div>
         </div>

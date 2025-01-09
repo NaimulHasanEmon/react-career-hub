@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png",
       "job_title": "Technical Database Engineer",
       "company_name": "Google LLC",
       "remote_or_onsite": "Remote",
@@ -20,7 +20,7 @@
     },
     {
         "id": 2,
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrf-3Tdf6jcSqRJG_oU2T7VskGZM3KflX7Q&s",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
         "remote_or_onsite": "Onsite",
@@ -39,7 +39,7 @@
       },
       {
         "id": 3,
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Vbel3oQsuD8xt1A9ABYuNS_GRoSZYRi9awJnZLXxI78CHwEIEQJ9CCFDe-Vl_DdRzQ&usqp=CAU",
+        "logo": "https://famfonts.com/wp-content/uploads/tesla-wide.png",
         "job_title": "Software Engineer",
         "company_name": "Tesla",
         "remote_or_onsite": "Onsite",
@@ -58,7 +58,7 @@
       },
       {
         "id": 4,
-        "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png",
         "job_title": "Software Engineer",
         "company_name": "Google LLC",
         "remote_or_onsite": "Onsite",
@@ -77,7 +77,7 @@
       },
       {
         "id": 5,
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Vbel3oQsuD8xt1A9ABYuNS_GRoSZYRi9awJnZLXxI78CHwEIEQJ9CCFDe-Vl_DdRzQ&usqp=CAU",
+        "logo": "https://famfonts.com/wp-content/uploads/tesla-wide.png",
         "job_title": "Technical Database Engineer",
         "company_name": "Tesla",
         "remote_or_onsite": "Remote",
@@ -96,7 +96,7 @@
       },
       {
         "id": 6,
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrf-3Tdf6jcSqRJG_oU2T7VskGZM3KflX7Q&s",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
         "remote_or_onsite": "Remote",

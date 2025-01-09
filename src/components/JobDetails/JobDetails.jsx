@@ -1,18 +1,29 @@
+import React from 'react';
 import { useLoaderData, useParams } from "react-router-dom";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import { IoCalendarOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
+import { ToastContainer, toast } from 'react-toastify';
+import { saveJobApplication } from '../../utility/localStorage';
 
 const JobDetails = () => {
     const jobs = useLoaderData()
     const {id} = useParams()
-    const job = jobs.find(job => parseInt(job.id) === parseInt(id))
-    
+    const idInt = parseInt(id)
+    const job = jobs.find(job => parseInt(job.id) === idInt)
+
+    // const notify = () => toast("Applied Successfully!");
+
     const {job_title, salary, contact_information, experiences, job_description, job_responsibility, educational_requirements} = job;
 
     const {phone, email, address} = contact_information;
+
+    const handleApplyNow = () => {
+        saveJobApplication(idInt)
+        toast("Applied Successfully!");
+    }
 
     return (
         <div className="mx-2 my-5">
@@ -81,9 +92,12 @@ const JobDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="btn bg-gradient-to-r from-indigo-400  to-indigo-500 text-white text-lg w-full mt-5">Apply Now</button>
+                    <button
+                    onClick={() => handleApplyNow()}
+                    className="btn bg-gradient-to-r from-indigo-400  to-indigo-500 text-white text-lg w-full mt-5">Apply Now</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

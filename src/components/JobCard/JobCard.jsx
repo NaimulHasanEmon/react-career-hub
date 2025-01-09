@@ -33,7 +33,7 @@ const JobCard = ({job}) => {
                         </div>
                     </div>
                     <div>
-                        <NavLink to=''>
+                        <NavLink to={`/job/${id}`}>
                             <button className="btn bg-gradient-to-r from-indigo-400  to-indigo-500 text-white text-lg">View Details</button>
                         </NavLink>
                     </div>

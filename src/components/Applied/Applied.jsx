@@ -11,7 +11,7 @@ const Applied = () => {
 
     useEffect(() => {
         const storedJobIds = getStoredJobApplication()
-        if(jobs.length > 0) {
+        if(storedJobIds.length > 0) {
             const jobsApplied = jobs.filter(job => storedJobIds.includes(job.id))
             setAppliedJobs(jobsApplied)
             setDisplayJobs(jobsApplied)
@@ -40,7 +40,7 @@ const Applied = () => {
         <div>
             <p className="text-4xl font-bold my-7 text-center">Applied Jobs: {appliedJobs.length}</p>
             <div>
-                <div className="flex my-3 justify-end">
+                <div className={`flex my-3 justify-end ${appliedJobs.length <= 0 && 'hidden'}`}>
                     <select 
                         className="select bg-slate-100"
                         onChange={(e) => handleFilter(e.target.value)}

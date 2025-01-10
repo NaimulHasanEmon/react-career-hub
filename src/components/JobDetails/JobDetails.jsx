@@ -14,8 +14,6 @@ const JobDetails = () => {
     const idInt = parseInt(id)
     const job = jobs.find(job => parseInt(job.id) === idInt)
 
-    // const notify = () => toast("Applied Successfully!");
-
     const {job_title, salary, contact_information, experiences, job_description, job_responsibility, educational_requirements} = job;
 
     const {phone, email, address} = contact_information;
